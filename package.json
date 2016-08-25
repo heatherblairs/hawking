@@ -18,7 +18,7 @@
     "serve-favicon": "~2.3.0"
   },
   "description": "## A De-coupled App with Front End, Back End and API",
-  "main": "hawking.js",
+  "main": "app.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
