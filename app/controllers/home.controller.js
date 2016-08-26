@@ -1,11 +1,11 @@
-/*eslint-disable*/
-var app = angular.module('hawkingApp');
-  app.controller('HomeController', function ($scope) {
-      $scope.view = {}
+angular
+   .module('hawking')
+   .controller('HomeController', HomeController);
 
-      // $scope.view.quote
-      // var random = Math.floor(Math.random() * 25);
-      // $scope.random = random.quote;
-
-
-  });
+ function HomeController($scope, $state) {
+   $scope.getResults = function () {
+     $state.go('home.files', {
+       file: $scope.fileResults
+     });
+   }
+ }

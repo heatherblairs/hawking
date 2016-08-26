@@ -1,7 +1,5 @@
-/*eslint-disable*/
-
 angular
-  .module('hawkingApp', ['ui.router'])
+  .module('hawking', ['ui.router'])
   .config(config)
 
 function config($stateProvider, $urlRouterProvider) {
@@ -11,11 +9,14 @@ function config($stateProvider, $urlRouterProvider) {
   .state('home', {
     url: '/home',
     controller: 'HomeController',
-    templateUrl: 'app/views/home.html'
-  })
-  .state('donut', {
-    url: '/donut',
-    controller: 'HomeController',
-    templateUrl: 'app/views/donut.html'
+    templateUrl: 'home.html'
+  }).state('home.full', {
+    url: '/full',
+    controller: 'FullListController',
+    templateUrl: 'full-list.html'
+  }).state('home.random', {
+    url: '/random',
+    controller: 'RandomController',
+    templateUrl: 'random.html'
   });
 }
